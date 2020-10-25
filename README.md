@@ -58,6 +58,7 @@ T3: (A3,B3,C3) y
 T4: (A4,B4,C4) n  
 - __Valid values__  
 (A2,B2,C2), (A3,B3,C3)  
+
 -__ECC Functional base__  
 
 |  | b1 | b2 |
