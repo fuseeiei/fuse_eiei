@@ -418,7 +418,6 @@ Base Choce: [T, T, T, T, c2, T], [T, T, T, T, c1, T]
 no. of tests = 2 + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(4-2)) + (2*(2-1)) = 16 tests  
 [T, T, T, T, c2, T]  
   - [F, T, T, T, c2, T], [T, F, T, T, c2, T], [T, T, F, T, c2, T], [T, T, T, F, c2, T], [T, T, T, T, c2, F], [T, T, T, T, c4, T], [T, T, T, T, c3, T]  
-  
 [T, T, T, T, c1, T]  
   - [F, T, T, T, c1, T], [T, F, T, T, c1, T], [T, T, F, T, c1, T], [T, T, T, F, c1, T], [T, T, T, T, c1, F]  
 
