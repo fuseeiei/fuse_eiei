@@ -17,11 +17,19 @@ __Method 1:__ testInsertData(), testInsertNullData()
 | C2: Input format is int | True | False |
 | C3: Occurrence of value in the data array | 0 (c1) | Equal or more than 1 (c2) |
 
--__PWC__<br/>
+__PWC__<br/>
 [T, T], ~~[T, F]~~, ~~[F, T]~~, [F, F],   
 [T, c1], [T, c2], ~~[F, c1]~~, [F, c2],   
 [T, c1], ~~[T, c2]~~, [F, c1], [F, c2]
 
--__Valid values__<br/>
+__Valid values__<br/>
 [T, F, c1], [F, T, c2]  
+
+__Derived test values__  
+|  | Value | Expected |
+|-|:-:|:-:|
+| T1: Invalid input | null | NullPointer Exception |
+| T2: Valid input | -87 | [.., -87, ..] |  
+
+
 
