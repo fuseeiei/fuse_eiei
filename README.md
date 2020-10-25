@@ -487,7 +487,7 @@ __Method 10:__ TestLineGraphPanel()
 | C1: LineGraphPanel has been created | True | False |
 | C2: correct assigned variable | every variable | some variables are incorrect |  
 
--__MBCC__  
+- __MBCC__  
   - (True, NotNull, Null,Null,Null,Null, invalid)  
     - (True, NotNull, Zero,Null,Null,Null, invalid), (True, NotNull, Null,Negative,Null,Null, invalid), (True, NotNull, Null, Zero,Null,Null, invalid), (True, NotNull, Null,Negative,Null,Null, invalid), (True, NotNull, Null,Null,Zero,Null, invalid), (True, NotNull, Null,Null,Negative,Null, invalid), (True, NotNull, Null,Null,Null, Zero, invalid), (True, NotNull, Null,Null,Null,Negative, invalid), (False, NotNull, Null,Null,Null,Null, invalid), (True, Null, Null,Null,Null,Null, invalid)  
   - (True, NotNull, Positive, Positive, Positive,Positive, Valid)  
