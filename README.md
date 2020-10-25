@@ -232,6 +232,116 @@ T3: (A2,B1)
 
 -----------------------------------------------------------------------------------------------------
 
+__Method 6:__ DataBuffer()
+- __Goal:__ To assign value of column and rows in dataBuffer class
+- __Testable Function:__
+  - DataBuffer()
+- __Parameters:__
+  - int row, column
+- __Return type:__
+  - -
+- __Return Value:__
+  - -  
+- __ECC Interface base:__  
+
+|  | b1 | b2 | b3 | b4 |
+|-|:-:|:-:|:-:|:-:|
+| C1: Column value | Null(A1) | Positive(A2) | Zero(A3) | Negative(A4) |
+| C2: Rows value | Null(B1) | Positive(B2) | Zero(B3) | Negative(B4) |  
+
+T1: (A1,B1)  
+T2: (A2,B2)  
+T3: (A3,B3)  
+T4: (A4,B4)  
+
+- __ECC Functionalbase:__  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: Column value is assigned correctly | True(A1) | False(A2) |
+| C1: Rows value is assigned correctly | True(B1) | False(B2) |  
+
+T1: (A1,B1)   
+T2: (A2,B2)  
+
+- __Valid values:__  
+
+- __Interface base:__  
+(A1,B1), (A2,B2), (A3,B3) ,(A4,B4)  
+
+-__Functional base:__  
+ (A1,B1)  
+ 
+ - __Derived test values__  
+ 
+ |  | Value | Expected |
+|-|:-:|:-:|
+| T1: Both column and row is null | DataBuffer(null, null) | NullPointer Exception |
+| T2: Both column and row is positive | DataBuffer(5,5) | Not error |
+| T3: Both column and row is zero | DataBuffer(0,0) | Not error |
+| T4: Both column and row is negative | DataBuffer(-1,-1) | NegativeArraySize Exception |
+| T5: Column value is assigned correctly and rows value is assigned correctly | DataBuffer(5,5) | getColumns = 5 <br>getRows = 5 |  
+
+-----------------------------------------------------------------------------------------------------
+
+__Method 7:__ getColumnClone()
+- __Goal:__ getColumnClone()
+- __Testable Function:__
+  - getColumnClone()
+- __Parameters:__
+  - int column
+- __Return type:__
+  - array
+- __Return Value:__
+  - The value is assigned in the new array.  
+  
+- __Interface base ACoC:__  
+
+|  | b1 | b2 | b3 | b4 |
+|-|:-:|:-:|:-:|:-:|
+| C1: column value | Null(A1) | Positive(A2) | Zero(A3) | Negative(A4) |  
+
+T1: (A1)   
+T2: (A2)   
+T3: (A3)   
+T4: (A4)  
+
+- __Functional base ACoC:__  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1 : All new elements array are the same with the main array column. | True(A1) | False(A2) |
+| C2 : Input column is in range of main array | True(B1) | False(B2) |  
+
+T1: (A1,B1)  
+T2: (A1,B2)  
+T3: (A2,B1)  
+T4: (A2,B2)  
+
+- __Eliminate redundant tests and infeasible tests:__  
+- __Interface base:__  
+(A1), (A2), (A3), (A4)    
+- __Functional base:__  
+(A1,B1)  
+
+- __Derived test values__  
+
+|  | Value | Expected |
+|-|:-:|:-:|
+| T1: Input column value is null | getColumnClone(null) | NullPointer Exception |
+| T2:Input column value is positive | getColumnClone(1)  | It will return the array element of column 1 |
+| T3: Input column value is zero | getColumnClone(0) | It will return the array element of column 0 |
+| T4: Input column is negative | getColumnClone(-1) | NegativeArraySize Exception |
+| T5:All new elements array are the same with the main array column and input column is in range of main array | getColumnClone(1) | All returned element is identical to the original array |  
+
+-----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
   
   
 
