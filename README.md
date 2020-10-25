@@ -430,7 +430,7 @@ no. of tests = 2 + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(4-2)) + (
 | C1: Constructor is created | True | False |
 | C2: Data of constructor after created | All data is valid (b1) | Contain invalid data (b2) |  
 
--__MBCC__  
+- __MBCC__  
 Base Choice = [T, b1], [T, b2]  
 no. of test = 2 + (2*(2-1)) + (2*(2-2)) = 4 tests  
 - [T, b1]  
