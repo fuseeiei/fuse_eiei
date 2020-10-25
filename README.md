@@ -113,6 +113,79 @@ c1b1, c1b2, c1b3
 [T1b1, T2b1], [T1b1, T2b2], [T1b2, T2b1], [T1b2, T2b2],  
 [T2b1, T3b1], [T2b1, T3b2], [T2b2, T3b1], [T2b2, T3b2]
 
+- __Eliminate redundant tests and infeasible tests:__  
+[T1b1, T2b1, T3b2], [T1b1, T2b2, T3b2]  
+
+-__Derived test values:__  
+
+|  | Value | Expected |
+|-|:-:|:-:|
+| T1: Array contains null value | [1,null] | NullPointer Exception |
+| T2: All array elements are int | [1,2] | true |
+| T3: null array | [] | NullPointer Exception |
+| T4: Array element contains int.MIN_VALUE | [int.min_value] | false |
+| T5: arbitrary array input | [1,2] | true |  
+
+-----------------------------------------------------------------------------------------------------
+
+__Method 5:__ TestsetDataRow()
+- __Goal:__ To set data in column of the main array.
+- __Testable Function:__
+  - setDataRow()  
+- __Parameters:__
+  - int column, array data
+- __Return type:__
+  - Boolean
+- __Return Value:__
+  - True    
+- __Interface base BCC:__  
+Base = (A2,B3)  
+
+|  | b1 | b2 | b3 | b4 |
+|-|:-:|:-:|:-:|:-:|
+| C1: rowvalue | Null(A1) | Positive(A2) | Zero(A3) | Negative(A4) |
+| C2: data array value | Empty(B1) | Contain some null values(B2) | All values are valid (B3) |  |  
+
+T1: (A2,B3)  
+T2: (A1,B3)   
+T3: (A4,B3)   
+T4: (A2,B1)   
+T5: (A2,B2)   
+T6: (A3,B3)  
+
+- __Eliminate redundant tests and infeasible tests:__  
+- __Interface base:__  
+(A2,B3),(A3,B3), (A1,B3)  
+- __Functional base:__  
+(A1), (A2)  
+- __BCC Functional base:__  
+Base choice = (A1)  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: Data is changed completely | Yes(A1) | No(A2) |  
+
+T1: (A1)  
+T2: (A2)  
+- __Derived test values__  
+
+|  | Value | Expected |
+|-|:-:|:-:|
+| T1: Input row value is positive and all values are valid in data array | setDataRow(1,data) | true |
+| T2:Input row value is zero and all values are valid in the data array. | setDataRow(0,data) | true |
+| T3: Input row value is null and all values are valid in the data array. | setDataRow(null ,data) | NullPointer Exception |
+| T4: Data is changed completely | setDataRow(0,data) | true |
+| T5: Data is not changed completely | setDataRow(0,null) | NullPointer Exception |  
+
+T1: (A1,B1)   
+T2: (A1,B2)   
+T3: (A2,B1)  
+
+-----------------------------------------------------------------------------------------------------
+
+  
+  
+
 
 
 
