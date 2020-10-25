@@ -91,13 +91,26 @@ __Method 3:__ TestappendDataRow()
   - Boolean
 - __Return Value:__
   - True, False  
-- __Interface base__  
+- __Interface base:__  
 
 |  | b1 | b2 | b3 |
 |-|:-:|:-:|:-:|
 | C1: Array value | Contains null value in some position | All value in the array is int | Empty array |  
 
 
+- __Valid values:__  
+c1b1, c1b2, c1b3  
+
+- __Functional base: PWC__  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| T1: New data is appended correctly | True | False |
+| T2: Return false if new data contains int.MIN_VALUE | True | False |
+| T3: Shift if array is full | True | False |  
+
+[T1b1, T2b1], [T1b1, T2b2], [T1b2, T2b1], [T1b2, T2b2],  
+[T2b1, T3b1], [T2b1, T3b2], [T2b2, T3b1], [T2b2, T3b2]
 
 
 
