@@ -59,7 +59,7 @@ T4: (A4,B4,C4) n
 - __Valid values__  
 (A2,B2,C2), (A3,B3,C3)  
 
--__ECC Functional base__  
+- __ECC Functional base__  
 
 |  | b1 | b2 |
 |-|:-:|:-:|
@@ -79,6 +79,24 @@ T2: (A2,B2,C2) n*
 | T1: Row, column, data value value are zero | setData(0, 0, 0) | true |
 | T2: Row, column, data value value are positive | setData(1, 1, 1) | true |
 | T3: Row, column value is in range and data is set correctly | setData(1, 1, 1) | true |  
+
+
+__Method 3:__ TestappendDataRow() 
+- __Goal:__ To append array input into the back of an existing data array, shift to the right if the existing data array is full.
+- __Testable Function:__
+  - appendDataRow()
+- __Parameters:__
+  - int array
+- __Return type:__
+  - Boolean
+- __Return Value:__
+  - True, False  
+- __Interface base__  
+
+|  | b1 | b2 | b3 |
+|-|:-:|:-:|:-:|
+| C1: Array value | Contains null value in some position | All value in the array is int | Empty array |  
+
 
 
 
