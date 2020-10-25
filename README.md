@@ -170,7 +170,7 @@ __Method 4:__ testResetBuffer()
 |  | Array | Expected |
 |-|:-:|:-:|
 | T1: Array is reset successfully  | [1, 5, 3, 6, 8, ...] | [-2147483648, -2147483648, -2147483648, ...] |
-| T2: Array cannot reset | [1, 3, 5, 4, null, ...] | NullPointer Exception |  
+| T2: Array cannot reset | [] | [] |  
 
 
 
