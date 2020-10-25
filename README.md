@@ -494,6 +494,27 @@ __Method 10:__ TestLineGraphPanel()
     - (True, NotNull, Zero, Positive, Positive,Positive, Valid), (True, NotNull, Negative, Positive, Positive,Positive, Valid), (True, NotNull, Positive, Zero, Positive,Positive, Valid), (True, NotNull, Positive, Negative, Positive,Positive, Valid), (True, NotNull, Positive, Positive, Zero,Positive, Valid), (True, NotNull, Positive, Positive, Negative,Positive, Valid), (True, NotNull, Positive, Positive, Positive, Zero, Valid),
 (True, NotNull, Positive, Positive, Positive, Negative, Valid), (False, NotNull, Positive, Positive, Positive,Positive, Valid), (True, Null, Positive, Positive, Positive,Positive, Valid)  
 
+- __MBCC__  
+  - (True, every variable)  
+  - (False,  every variable)  
+    - there is no test case that falls into this characteristic.  
+  - (True, some variables are incorrect)  
+    -  there is no test case that falls into this characteristic.  
+  - (False, some variables are incorrect)  
+  
+- __Valid values:__  
+  - (True, NotNull, Zero,Null,Null,Null, invalid), (True, NotNull, Null,Negative,Null,Null, invalid), (True, NotNull, Null, Zero,Null,Null, invalid), (True, NotNull, Null,Negative,Null,Null, invalid), (True, NotNull, Null,Null,Zero,Null, invalid), (True, NotNull, Null,Null,Negative,Null, invalid), (True, NotNull, Null,Null,Null, Zero, invalid), (True, NotNull, Null,Null,Null,Negative, invalid), (False, NotNull, Null,Null,Null,Null, invalid), (True, Null, Null,Null,Null,Null, invalid), (True, NotNull, Positive, Positive, Positive,Positive, Valid), (True, NotNull, Zero, Positive, Positive,Positive, Valid), (True, NotNull, Negative, Positive, Positive,Positive, Valid), (True, NotNull, Positive, Zero, Positive,Positive, Valid), (True, NotNull, Positive, Negative, Positive,Positive, Valid), (True, NotNull, Positive, Positive, Zero,Positive, Valid), (True, NotNull, Positive, Positive, Negative,Positive, Valid), (True, NotNull, Positive, Positive, Positive, Zero, Valid), (True, NotNull, Positive, Positive, Positive, Negative, Valid), (True, every variable), (False, some variables are incorrect)  
+  
+- __Derived test values__  
+
+|  | Graph<br>Buffer | name | ymin | ymax | yminor | xminor | color | Expected result |
+|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| T1: Invalid input (GraphBuffer) | -1 | “Test” | 0 | null | null | null | 127,255,127 | NegativeArraySizeException |
+| T2: Invalid input (null) | 100 | “Test” | null | null | null | null | 127,255,127 | NullPointerException |
+| T3: Invalid input (color) | 100 | “Test” | 1 | 1 | 1 | 1 | 127,256,127 | Color parameter outside of expected range: Green |
+| T4: Valid input  | 100 | “Test” | 1 | 1 | 1 | 1 | 127,255,127 | LineGraphPanel has been created |  
+
+-----------------------------------------------------------------------------------------------------
 
 
 
