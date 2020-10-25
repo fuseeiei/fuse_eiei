@@ -1,11 +1,11 @@
 # 
-<b>Method 1</b>: testInsertData(), testInsertNullData()
-* Goal: To test whether the data is inserted into the array
-* Testable Function
+__Method 1:__ testInsertData(), testInsertNullData()
+* __Goal:__ To test whether the data is inserted into the array
+* __Testable Function:__
   * insertData()
-* Parameters
+* __Parameters:__
   * int value
-* Return type
+* __Return type:__
   * int Array
-* Return Value
+* __Return Value:__
   * int Array with inserted value
