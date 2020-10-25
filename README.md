@@ -1,1 +1,2 @@
-# fuse_eiei
+# 
+Method 1: testInsertData(), testInsertNullData()
