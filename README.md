@@ -22,7 +22,7 @@ __Method 1:__ testInsertData(), testInsertNullData()
 [T, c1], [T, c2], ~~[F, c1]~~, [F, c2],   
 [T, c1], ~~[T, c2]~~, [F, c1], [F, c2]
 
-- __Valid values__<br/>
+- __Valid values:__<br/>
 [T, F, c1], [F, T, c2]  
 
 - __Derived test values__
@@ -56,7 +56,7 @@ T1: (A1,B1,C1) n
 T2: (A2,B2,C2) y  
 T3: (A3,B3,C3) y  
 T4: (A4,B4,C4) n  
-- __Valid values__  
+- __Valid values:__  
 (A2,B2,C2), (A3,B3,C3)  
 
 - __ECC Functional base__  
@@ -70,7 +70,7 @@ T4: (A4,B4,C4) n
 T1: (A1,B1,C1) y*  
 T2: (A2,B2,C2) n*  
 
-- __Valid values__  
+- __Valid values:__  
 (A1,B1,C1)  
 - __Derived test values__  
 
@@ -418,6 +418,7 @@ Base Choce: [T, T, T, T, c2, T], [T, T, T, T, c1, T]
 no. of tests = 2 + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(4-2)) + (2*(2-1)) = 16 tests  
 [T, T, T, T, c2, T]  
   - [F, T, T, T, c2, T], [T, F, T, T, c2, T], [T, T, F, T, c2, T], [T, T, T, F, c2, T], [T, T, T, T, c2, F], [T, T, T, T, c4, T], [T, T, T, T, c3, T]  
+  
 [T, T, T, T, c1, T]  
   - [F, T, T, T, c1, T], [T, F, T, T, c1, T], [T, T, F, T, c1, T], [T, T, T, F, c1, T], [T, T, T, T, c1, F]  
 
