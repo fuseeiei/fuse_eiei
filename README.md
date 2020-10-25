@@ -32,7 +32,7 @@ __Method 1:__ testInsertData(), testInsertNullData()
 | T1: Invalid input | null | NullPointer Exception |
 | T2: Valid input | -87 | [.., -87, ..] |  
 
-
+-----------------------------------------------------------------------------------------------------
 
 __Method 2:__ setData()
 - __Goal:__ To set the data in the main array
@@ -80,6 +80,7 @@ T2: (A2,B2,C2) n*
 | T2: Row, column, data value value are positive | setData(1, 1, 1) | true |
 | T3: Row, column value is in range and data is set correctly | setData(1, 1, 1) | true |  
 
+-----------------------------------------------------------------------------------------------------
 
 __Method 3:__ TestappendDataRow() 
 - __Goal:__ To append array input into the back of an existing data array, shift to the right if the existing data array is full.
