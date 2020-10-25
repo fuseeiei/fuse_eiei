@@ -455,6 +455,44 @@ no. of test = 2 + (2*(2-1)) + (2*(2-2)) = 4 tests
 
 -----------------------------------------------------------------------------------------------------
 
+__Method 10:__ TestLineGraphPanel()  
+- __Goal:__ To plot and show a sin function model based on the input value
+- __Testable Function:__
+  - LineGraphPanel(GraphBuffer buffer, String name, int ymin, int ymax, int yminor, int xminor, Color color)
+- __Parameters (Not directly):__
+  - object GraphBuffer, String name,  int ymin, int ymax, int yminor, int xminor, Color color  
+- __Return type:__
+  - -
+- __Return Value:__
+  - -  
+- __Exceptional behavior__  
+  - -  
+- __Interface base:__
+
+
+|  | b1 | b2 | b3 | b4 |
+|-|:-:|:-:|:-:|:-:|
+| C1: object graphBuffer value | Valid(A1) | Invalid(A2) | - | - |
+| C2: name  value | Null(B1) | NotNull(B2) | - | - |
+| C3: ymin value | Null(C1) | Positive(C2) | Zero(C3) | Negative(C4) |
+| C4: ymax  value | Null(E1) | Positive(E2) | Zero(E3) | Negative(E4) |
+| C5: yminor  value | Null(F1) | Positive(F2) | Zero(F3) | Negative(F4) |
+| C6: xminor  value | Null(G1) | Positive(G2) | Zero(G3) | Negative(G4) |
+| C7: Color value | valid(D1) | invalid(D2) | - | - |  
+
+- __Functional base:__  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: LineGraphPanel has been created | True | False |
+| C2: correct assigned variable | every variable | some variables are incorrect |  
+
+-__MBCC__  
+  - (True, NotNull, Null,Null,Null,Null, invalid)  
+    - (True, NotNull, Zero,Null,Null,Null, invalid), (True, NotNull, Null,Negative,Null,Null, invalid), (True, NotNull, Null, Zero,Null,Null, invalid), (True, NotNull, Null,Negative,Null,Null, invalid), (True, NotNull, Null,Null,Zero,Null, invalid), (True, NotNull, Null,Null,Negative,Null, invalid), (True, NotNull, Null,Null,Null, Zero, invalid), (True, NotNull, Null,Null,Null,Negative, invalid), (False, NotNull, Null,Null,Null,Null, invalid), (True, Null, Null,Null,Null,Null, invalid)  
+  - (True, NotNull, Positive, Positive, Positive,Positive, Valid)  
+    - (True, NotNull, Zero, Positive, Positive,Positive, Valid), (True, NotNull, Negative, Positive, Positive,Positive, Valid), (True, NotNull, Positive, Zero, Positive,Positive, Valid), (True, NotNull, Positive, Negative, Positive,Positive, Valid), (True, NotNull, Positive, Positive, Zero,Positive, Valid), (True, NotNull, Positive, Positive, Negative,Positive, Valid), (True, NotNull, Positive, Positive, Positive, Zero, Valid),
+(True, NotNull, Positive, Positive, Positive, Negative, Valid), (False, NotNull, Positive, Positive, Positive,Positive, Valid), (True, Null, Positive, Positive, Positive,Positive, Valid)  
 
 
 
