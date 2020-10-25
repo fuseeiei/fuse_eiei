@@ -8,7 +8,8 @@ __Method 1:__ testInsertData(), testInsertNullData()
 * __Return type:__
   * int Array
 * __Return Value:__
-  * int Array with inserted value</br>
+  * int Array with inserted value
+</br>  
 |                                           |   b1   |             b2            |
 |-------------------------------------------|:------:|:-------------------------:|
 |           C1: int value is null           |  True  |           False           |
