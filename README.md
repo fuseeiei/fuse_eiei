@@ -113,7 +113,7 @@ c1b1, c1b2, c1b3
 [T1b1, T2b1], [T1b1, T2b2], [T1b2, T2b1], [T1b2, T2b2],  
 [T2b1, T3b1], [T2b1, T3b2], [T2b2, T3b1], [T2b2, T3b2]
 
-- __Eliminate redundant tests and infeasible tests:__  
+__Eliminate redundant tests and infeasible tests:__  
 [T1b1, T2b1, T3b2], [T1b1, T2b2, T3b2]  
 
 -__Derived test values:__  
@@ -202,7 +202,7 @@ T4: (A2,B1)
 T5: (A2,B2)   
 T6: (A3,B3)  
 
-- __Eliminate redundant tests and infeasible tests:__  
+__Eliminate redundant tests and infeasible tests__  
 - __Interface base:__  
 (A2,B3),(A3,B3), (A1,B3)  
 - __Functional base:__  
@@ -285,7 +285,7 @@ T2: (A2,B2)
 -----------------------------------------------------------------------------------------------------
 
 __Method 7:__ getColumnClone()
-- __Goal:__ getColumnClone()
+- __Goal:__ To clone the value in the main array
 - __Testable Function:__
   - getColumnClone()
 - __Parameters:__
@@ -318,7 +318,7 @@ T2: (A1,B2)
 T3: (A2,B1)  
 T4: (A2,B2)  
 
-- __Eliminate redundant tests and infeasible tests:__  
+__Eliminate redundant tests and infeasible tests__  
 - __Interface base:__  
 (A1), (A2), (A3), (A4)    
 - __Functional base:__  
@@ -336,7 +336,124 @@ T4: (A2,B2)
 
 -----------------------------------------------------------------------------------------------------
 
+__Method 8:__ setDataColumn()
+- __Goal:__ To set data in column of the main array  
+- __Testable Function:__
+  - setDataColumn())
+- __Parameters:__
+  - int column, array data
+- __Return type:__
+  - Boolean
+- __Return Value:__
+  - True  
+  
+- __Interface base BCC:__  
+Base = (A2, B3)  
 
+|  | b1 | b2 | b3 | b4 |
+|-|:-:|:-:|:-:|:-:|
+| C1: column value | Null(A1) | Positive(A2) | Zero(A3) | Negative(A4) |
+| C2: data array value | Empty(B1) | Contain some null values(B2) | All values are valid (B3) |  |  
+
+T1: (A2,B3)   
+T2: (A1,B3)   
+T3: (A4,B3)   
+T4: (A2,B1)   
+T5: (A2,B2)   
+T6: (A3,B3)  
+
+- __Functional base BCC:__  
+Base = (A1)  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: Data is changed completely | Yes(A1) | No(A2) |  
+
+T1: (A1)   
+T2: (A2)  
+
+__Eliminate redundant tests and infeasible tests__  
+- __Interface base:__  
+(A2,B3),(A3,B3), (A1,B3)    
+- __Functional base:__  
+(A1), (A2)   
+
+- __Derived test values__  
+
+|  | Value | Expected |
+|-|:-:|:-:|
+| T1: Input column value is positive and all values are valid in data array | setDataColumn(1,data) | true |
+| T2:Input column value is zero and all values are valid in the data array. | setDataColumn(0,data) | true |
+| T3: Input column value is null and all values are valid in the data array. | setDataColumn(null ,data) | NullPointer Exception |
+| T4: Data is changed completely | setDataColumn(0,data) | true |
+| T5: Data is not changed completely | setDataColumn(0,null) | NullPointer Exception |  
+
+-----------------------------------------------------------------------------------------------------
+
+__Method 9:__ testBarGraphPanel()  
+- __Goal:__ To plot and show a bar graph model based on the input value
+- __Testable Function:__
+  - BarGraphPanel()
+- __Parameters (Not directly):__
+  - object GraphBuffer, String graphName, int yMin, int yMax, int yMinor, Color.class
+- __Return type:__
+  - -
+- __Return Value:__
+  - -  
+- __Exceptional behavior__  
+  - yMin/yMax can be both negative and positive  
+- __Interface base:__
+
+|  | b1 | b2 | b3 | b4 |
+|-|:-:|:-:|:-:|:-:|
+| C1: object graphBuffer is valid | True | False | - | - |
+| C2: Graph name is valid | True | False | - | - |
+| C3: yMin is int | True | False | - | - |
+| C4: yMax is int | True | False | - | - |
+| C5: yMinor int value | Zero (c1) | More than or equal to 1 (c2) | Negative (c3) | Null (c4) |
+| C6: Color value is valid | True | False | - | - |  
+
+- __MBCC__  
+Base Choce: [T, T, T, T, c2, T], [T, T, T, T, c1, T]  
+no. of tests = 2 + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(2-1)) + (2*(4-2)) + (2*(2-1)) = 16 tests  
+[T, T, T, T, c2, T]  
+  - [F, T, T, T, c2, T], [T, F, T, T, c2, T], [T, T, F, T, c2, T], [T, T, T, F, c2, T], [T, T, T, T, c2, F], [T, T, T, T, c4, T], [T, T, T, T, c3, T]  
+[T, T, T, T, c1, T]  
+  - [F, T, T, T, c1, T], [T, F, T, T, c1, T], [T, T, F, T, c1, T], [T, T, T, F, c1, T], [T, T, T, T, c1, F]  
+
+- __Valid values:__  
+[T, T, T, T, c2, T], [F, T, T, T, c2, T], [T, T, F, T, c2, T], [T, T, T, F, c2, T], [T, T, T, T, c2, F], [T, T, T, T, c4, T], [T, T, T, T, c3, T], [T, T, T, T, c1, T], [T, T, T, T, c1, T], [F, T, T, T, c1, T], [T, T, F, T, c1, T], [T, T, T, F, c1, T], [T, T, T, T, c1, F]  
+
+- __Functional base__  
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: Constructor is created | True | False |
+| C2: Data of constructor after created | All data is valid (b1) | Contain invalid data (b2) |  
+
+-__MBCC__  
+Base Choice = [T, b1], [T, b2]  
+no. of test = 2 + (2*(2-1)) + (2*(2-2)) = 4 tests  
+[T, b1]  
+  - [F, b1]  
+[T, b2]  
+  - [F, b2]  
+- __Valid values:__  
+[T, b1], [F, b2]  
+
+- __Derived test values__  
+
+|  | Graph<br>Buffer | name | ymin | ymax | yminor | color | Expected result |
+|-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| T1: Invalid input (GraphBuffer) | -5 | “First Graph” | -100 | 150 | 25 | Color.CYAN | NegativeArraySizeException |
+| T2: Invalid input (ymin) | 100 | “First Graph” | null | 100 | 25 | Color.RED | NullPointerException |
+| T3: Invalid input (ymax) | 100 | “First Graph” | -100 | null | 25 | Color.RED | NullPointerException |
+| T4: Invalid input (yminor) | 100 | “First Graph” | -100 | 100 | null | Color.RED | NullPointerException |
+| T5: Invalid input (color) | 100 | “First Graph” | -100 | 150 | 30 | 125,256,125 | Color parameter outside of expected range: Green |
+| T6: Valid input (yminor = 0) | 100 | “First Graph” | -100 | 100 | 0 | Color.RED | BarGraphPanel has been created |
+| T7: Valid input (yminor<0) | 100 | “First Graph” | -100 | 100 | -25 | Color.RED | BarGraphPanel has been created |
+| T8: Valid input  | 100 | “First Graph” | -100 | 100 | 25 | Color.RED | BarGraphPanel has been created |  
+
+-----------------------------------------------------------------------------------------------------
 
 
 
