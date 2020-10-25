@@ -1,5 +1,5 @@
 # 
-<b>Method 1<b>: testInsertData(), testInsertNullData()
+<b>Method 1</b>: testInsertData(), testInsertNullData()
 Goal: To test whether the data is inserted into the array
 Testable Function
 insertData()
