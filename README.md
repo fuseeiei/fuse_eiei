@@ -128,6 +128,55 @@ c1b1, c1b2, c1b3
 
 -----------------------------------------------------------------------------------------------------
 
+__Method 4:__ testResetBuffer() 
+- __Goal:__ Reset the main array to its initial state.
+- __Testable Function:__
+  - ResetBuffer()
+- __Parameters (Not directly):__
+  - data [][]
+- __Return type:__
+  - -
+- __Return Value:__
+  - -  
+- __Exceptional behavior__  
+  - -
+- __Interface base:__  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: Array element value | All valid (a1) | Contain null value (a2) |
+| C2: Array is empty | True | False |  
+
+- __ACoC:__  
+[a1, T], [a1, F], [a2, T], [a2, T]  
+
+- __Valid values:__  
+[a1, F], [a2, F]  
+
+- __Functional base:__  
+
+|  | b1 | b2 |
+|-|:-:|:-:|
+| C1: Array element after reset | All default value (-2147483648) | Contain Invalid value |  
+
+- __ACoC:__  
+[b1], [b2]   
+
+- __Valid values:__  
+[b1]  
+
+-__Derived test values:__  
+
+|  | Array | Expected |
+|-|:-:|:-:|
+| T1: Array is reset successfully  | [1, 5, 3, 6, 8, ...] | [-2147483648, -2147483648, -2147483648, ...] |
+| T2: Array cannot reset | [1, 3, 5, 4, null, ...] | NullPointer Exception |  
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+
 __Method 5:__ TestsetDataRow()
 - __Goal:__ To set data in column of the main array.
 - __Testable Function:__
