@@ -29,7 +29,7 @@ This test case checks the link is going to right page. After the user clicks &qu
   3. See the result, whether the current page show correctly or not
 
 - **Expected result -** The &quot;ดูรุ่นทั้งหมด&quot; link is linking to About us page.
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 3**
 
 This test case checks the link is going to right page. After the user clicks &quot;บทความยอดนิยม&quot;, the website must show &quot;Tech news&quot; page and the current url must to same as Technews url.
@@ -41,7 +41,7 @@ This test case checks the link is going to right page. After the user clicks &qu
   3. See the result, whether the current page show correctly or not
 
 - **Expected result -** The &quot;บทความยอดนิยม&quot; link is linking to About us page.
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 4**
 
 This test case checks the link is going to right page. After the user clicks &quot;จัดสเปค&quot;, the website must show &quot;Spec PC&quot; page and the current url must to same as Spec PC url.
@@ -53,7 +53,7 @@ This test case checks the link is going to right page. After the user clicks &qu
   3. See the result, whether the current page show correctly or not
 
 - **Expected result -** The &quot;จัดสเปค&quot; link is linking to About us page.
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 5**
 
 This test case checks the sub-menu (filter options) on the notebook search page after the user clicks &quot;search for a gaming notebook &quot;. Therefore, the sub-menu on the left side of the results content must be updated. For example, the type of notebook must disappear since the user search for a gaming notebook.
@@ -65,7 +65,7 @@ This test case checks the sub-menu (filter options) on the notebook search page 
   3. See the result, which is the updated sub-menu on the left
 
 - **Expected Output** - The filter menu of notebook type disappeared
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 6**
 
 This test case checks for the sub-menu (filter options) on the notebook search page after the user clicks &quot;search for a gaming notebook &quot; and &quot;Price - ราคา&quot;. Therefore, the filter option of the notebook price must appear.
@@ -79,7 +79,7 @@ This test case checks for the sub-menu (filter options) on the notebook search p
   5. See the result, whether the price filter sub-menu appear correctly or not
 
 - **Expected Output** - The price filter sub-menu appear correctly (only one appeared sub-menu)
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 7**
 
 The test case checks the result when the user searches the product by sending a query. It will check that the title of each product contains the query.
@@ -90,7 +90,7 @@ The test case checks the result when the user searches the product by sending a 
   2. Send a query into search input box
 
 - **Expected Output** - All of the products that show contain the search query.
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 8**
 
 This test case checks the result when user sorts the product by click dropdown and then click &quot;ราคาต่ำสุด&quot; the result must show the products that sorted form lowest price to highest price.
@@ -102,7 +102,7 @@ This test case checks the result when user sorts the product by click dropdown a
   3. click &quot;ราคาต่ำสุด&quot;
 
 - **Expected output -** All of the product are sorted by price from lowest to highest.
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 9**
 
 This test case checks results of notebook comparison filter option, which is the highlighted function of the different spec of the compared notebook. Therefore, the different spec of compared notebooks must be highlighted correctly after the user clicked &quot;ไฮไลท์เฉพาะที่ต่างกัน&quot; (highlight only the differences).
@@ -117,7 +117,7 @@ This test case checks results of notebook comparison filter option, which is the
   6. See the result, whether the differences are highlighted or not
 
 - **Expected Output** - The different spec of compared notebooks is highlighted
-
+___________________________________________________________________________________________________________________________________________________________________
 **Test Case 10 - Content**
 
 This test case checks the consistency of contents on the navigation bar on the top of the website. Therefore, the contents of the navigation bar must be the same.
