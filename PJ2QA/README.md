@@ -6,11 +6,11 @@ We choose Notebookspec website because this website has many function that we ca
 
 **Note** : In the main function, we have set the precondition state of the website by opening the website then waiting for the popup to display and close it before beginning the testing processes.
 
-**(Aom) Test Case 1**
+**Test Case 1**
 
 This test case checks the link is going to right page. After the user clicks &quot;ติดต่อเรา&quot;, the website must show &quot;About us&quot; page and the current url must to same as About us url.
 
-**Steps**
+- **Steps**
 
 1. Navigate to home page
 2. click &quot;ติดต่อเรา&quot; link
