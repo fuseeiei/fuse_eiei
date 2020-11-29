@@ -12,9 +12,9 @@ This test case checks the link is going to right page. After the user clicks &qu
 
 - **Steps**
 
--- 1. Navigate to home page
--- 2. click &quot;ติดต่อเรา&quot; link
--- 3. See the result, whether the current page show correctly or not
+- 1. Navigate to home page
+- 2. click &quot;ติดต่อเรา&quot; link
+- 3. See the result, whether the current page show correctly or not
 
 - **Expected result -** The &quot;ติดต่อเรา&quot; link is linking to About us page.
 
