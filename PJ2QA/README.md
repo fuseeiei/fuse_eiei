@@ -2,13 +2,13 @@
 
 **Reason**
 
-We choose Notebookspec website because this website has many function that we can test on such as, searching, sorting, and comparing. Also, it is the website that we use often and have found bugs at some function.
+  We choose Notebookspec website because this website has many function that we can test on such as, searching, sorting, and comparing. Also, it is the website that we use often and have found bugs at some function.
 
 **Note** : In the main function, we have set the precondition state of the website by opening the website then waiting for the popup to display and close it before beginning the testing processes.
 
 **Test Case 1**
 
-This test case checks the link is going to right page. After the user clicks &quot;ติดต่อเรา&quot;, the website must show &quot;About us&quot; page and the current url must to same as About us url.
+  This test case checks the link is going to right page. After the user clicks &quot;ติดต่อเรา&quot;, the website must show &quot;About us&quot; page and the current url must to same as About us url.
 
 - **Steps**
 
@@ -20,7 +20,7 @@ This test case checks the link is going to right page. After the user clicks &qu
 
 **Test Case 2**
 
-This test case checks the link is going to right page. After the user clicks &quot;ดูรุ่นทั้งหมด&quot;, the website must show &quot;Top chart notebook&quot; page and the current url must to same as Top Chart notebook url.
+  This test case checks the link is going to right page. After the user clicks &quot;ดูรุ่นทั้งหมด&quot;, the website must show &quot;Top chart notebook&quot; page and the current url must to same as Top Chart notebook url.
 
 - **Steps**
 
